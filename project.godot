@@ -1,0 +1,18 @@
+; Reproduces the hang of godotengine/godot#125309 with the Separate thread model.
+config_version=5
+
+[application]
+
+config/name="material-race-stress"
+run/main_scene="res://stress.tscn"
+
+[display]
+
+window/size/viewport_width=640
+window/size/viewport_height=360
+window/vsync/vsync_mode=0
+
+[rendering]
+
+renderer/rendering_method="forward_plus"
+driver/threads/thread_model=2
